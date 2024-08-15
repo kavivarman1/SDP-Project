@@ -1,0 +1,117 @@
+/* TurfCard.css */
+.turf-card {
+    width: 100%; 
+    margin: 10px 0; 
+    max-width: 800px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* z-index: -2; */ /* Remove or set to a positive value if needed */
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.turf-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.turf-details {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.turf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.turf-name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.favorite-icon {
+    color: rgb(215, 8, 8);
+    cursor: pointer;
+}
+
+.turf-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+}
+
+.rating-score {
+    font-size: 1.2em;
+    color: green;
+    margin-right: 5px;
+}
+
+.rating-count {
+    margin-left: 10px;
+}
+
+.trending-icon {
+    color: orange;
+    margin-left: 10px;
+}
+
+.address-icon {
+    color: grey;
+    margin-right: 5px;
+}
+
+.turf-address {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.turf-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.tag-button {
+    margin: 2px;
+}
+
+.turf-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.action-icon {
+    margin-right: 5px;
+}
+
+.rating-icon {
+    color: gold;
+}
+
+.contact-icon {
+    color: green;
+}

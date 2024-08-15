@@ -1,0 +1,62 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the left */
+  padding: 20px;
+  background-image: url('./images/mainbg10.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+  color: white;
+  background-color: rgb(219, 88, 88);
+  position: relative;
+  top: -10px;
+  position: sticky;
+  z-index: 900;
+}
+
+.quote-container {
+  flex: 1;
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.quote {
+  font-size: 24px;
+  font-style: italic;
+  color: black;
+  margin-top: 20px;
+  transition: opacity 1s ease-in-out;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 10%;
+}
+
+.MuiTextField-root,
+.MuiFormControl-root {
+  width: 100%;
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+}
+
+@media (min-width: 600px) {
+  .search-container {
+    flex-direction: row;
+    align-items: flex-start; /* Maintain left alignment on larger screens */
+  }
+  .MuiTextField-root,
+  .MuiFormControl-root {
+    width: auto;
+  }
+}

@@ -1,0 +1,23 @@
+.turf-management {
+    padding: 20px;
+  }
+  
+  .turf-management-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .turf-management-table th, .turf-management-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .turf-management-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .turf-image {
+    width: 100px;
+    height: auto;
+  }
+  

@@ -1,0 +1,555 @@
+src/components/BookingPage.css
+
+.booking-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  animation: fadeIn 2s ease-in-out;
+  padding: 20px;
+  width: 500%;
+}
+
+.booking-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin to separate from the owner details card */
+}
+
+.slideshow-container {
+  width: 60%; /* Take up 60% of the width */
+  height: 300px; /* Fixed height for the slideshow */
+  overflow: hidden;
+  margin-left: 20px; /* Add some space between details and image */
+  margin-top: 15px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.booking-details-container {
+  width: 40%; /* Take up 40% of the width */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.details {
+  margin-top: 30px;
+  height: 220px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-value {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.stars {
+  color: #f39c12;
+  margin-right: 10px;
+}
+
+.ratings-count {
+  margin-right: 10px;
+}
+
+.trending {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.address, .certified-trainers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.address i, .certified-trainers i {
+  color: #e74c3c;
+  margin-right: 5px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions .btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.actions .btn i {
+  margin-right: 5px;
+}
+
+.actions .btn:hover {
+  background-color: #45a049;
+}
+
+.header {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header-fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.header-fields span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-fields span:hover {
+  color: #4CAF50;
+}
+
+.owner-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.owner-profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.owner-details {
+  flex: 1;
+}
+
+.owner-details h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.owner-details p {
+  margin: 5px 0;
+}
+
+.overview-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.overview-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-content > div {
+  flex: 1;
+  margin-right: 20px; /* Add some space between the sections */
+}
+
+.overview-content > div:last-child {
+  margin-right: 0; /* Remove the margin for the last section */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-image-container {
+  width: calc(33.333% - 10px); /* Three images per row with gap */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image-container:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.feedback-form-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.feedback-form-container h4 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.feedback-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.submit-feedback {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-feedback:hover {
+  background-color: #45a049;
+}
+
+.rating-container {
+  margin-top: 20px;
+}
+
+.rating-options {
+  display: flex;
+  gap: 10px;
+}
+
+.rating-option {
+  cursor: pointer;
+  font-size: 24px; /* Adjust size if needed */
+}
+
+.rating-option.active { 
+  color: #ffeb3b;
+}
+
+.rating-emojis {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 24px; /* Adjust size if needed */
+}
+
+.owner-info{
+  padding-left: 2%;
+}
+/* src/components/BookingPage.css */
+
+.booking-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  animation: fadeIn 2s ease-in-out;
+  padding: 20px;
+}
+
+.booking-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Add margin to separate from the owner details card */
+}
+
+.slideshow-container {
+  width: 60%; /* Take up 60% of the width */
+  height: 300px; /* Fixed height for the slideshow */
+  overflow: hidden;
+  margin-left: 20px; /* Add some space between details and image */
+  margin-top: 15px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+.booking-details-container {
+  width: 40%; /* Take up 40% of the width */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.details {
+  margin-top: 30px;
+  height: 220px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-value {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.stars {
+  color: #f39c12;
+  margin-right: 10px;
+}
+
+.ratings-count {
+  margin-right: 10px;
+}
+
+.trending {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.address, .certified-trainers {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.address i, .certified-trainers i {
+  color: #e74c3c;
+  margin-right: 5px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions .btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.actions .btn i {
+  margin-right: 5px;
+}
+
+.actions .btn:hover {
+  background-color: #45a049;
+}
+
+.header {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header-fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.header-fields span {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.header-fields span:hover {
+  color: #4CAF50;
+}
+
+.owner-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.owner-profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.owner-details {
+  flex: 1;
+}
+
+.owner-details h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.owner-details p {
+  margin: 5px 0;
+}
+
+.overview-box {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.overview-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview-content > div {
+  flex: 1;
+  margin-right: 20px; /* Add some space between the sections */
+}
+
+.overview-content > div:last-child {
+  margin-right: 0; /* Remove the margin for the last section */
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-image-container {
+  width: calc(33.333% - 10px); /* Three images per row with gap */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.gallery-image-container:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.feedback-form-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.feedback-form-container h4 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.feedback-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.submit-feedback {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-feedback:hover {
+  background-color: #45a049;
+}
+
+.rating-container {
+  margin-top: 20px;
+}
+
+.rating-options {
+  display: flex;
+  gap: 10px;
+}
+
+.rating-option {
+  cursor: pointer;
+  font-size: 24px; /* Adjust size if needed */
+}
+
+.rating-option.active { 
+  color: #ffeb3b;
+}
+
+.rating-emojis {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 24px; /* Adjust size if needed */
+}
+
+.owner-info{
+  padding-left: 2%;
+}

@@ -1,0 +1,99 @@
+.advertisement-page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  background-image: url('C:\\Users\\Kavivarman\\Desktop\\React\\Turf_Booking\\turf\\src\\component\\images\\advertise2.jpg');
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  padding-right: 20px; /* Add some padding to the right */
+}
+
+.advertisement-header {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.advertisement-header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.advertisement-header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.advertisement-header nav ul li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.advertisement-container {
+  margin-top: 40px; /* Adjust based on header height */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px; /* Set the border radius to 30px */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-in-out;
+  width: 90%; /* Adjust to make it fit the component */
+  max-width: 600px;
+  height: auto; /* Adjust this value to make the container shorter */
+  overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+  max-height: 80vh; /* Adjust to ensure the container is fully visible within the viewport */
+  align-self: flex-end; /* Align the container to the right */
+  margin-right: 30px;
+}
+
+.advertisement-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.advertisement-form .MuiTextField-root {
+  margin-bottom: 20px;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  background-color: #28a745;
+  color: #fff;
+  animation: buttonPop 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonPop {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

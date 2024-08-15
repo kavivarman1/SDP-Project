@@ -1,0 +1,88 @@
+/* src/components/BookingPage.css */
+
+.booking-page {
+  font-family: 'Arial', sans-serif;
+  background-color: #fbf6f6;
+  padding-top: 10px; /* Remove default padding */
+  height: 100vh; /* Full viewport height */
+  bottom: 300%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.page-image {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.booking-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the form vertically and horizontally */
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Maximum width for better appearance */
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 25%;
+  height: 70vh; /* Set height to allow scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.booking-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #010101;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Let the form height adjust automatically */
+}
+
+.booking-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #0a0f0e;
+
+}
+
+.booking-form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 15px;
+  background-color: #070808;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #020303;
+}
+
+.error-message {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  margin-top: 10px;
+  text-align: center;
+}

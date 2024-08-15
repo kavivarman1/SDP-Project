@@ -1,0 +1,198 @@
+.container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    max-width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Center horizontally */
+    position: absolute; /* Center vertically */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-left: 20px;
+    margin-top: 80px
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+  }
+  
+  .sign-in-container {
+    left: 0;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(100%);
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .sign-up-container {
+    left: 0;
+  }
+  
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  .overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 100;
+  }
+  
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+  }
+  
+  .overlay {
+    background: #ff416c;
+    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .container.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+  
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .overlay-left {
+    transform: translateX(-20%);
+    padding-left: 10px; /* Add padding to the right */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center horizontally */
+    text-align: center;
+  }
+  
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+  
+  .overlay-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+  
+  /* Centering text and button */
+  .center-text {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .form-container .MuiTextField-root,
+  .form-container .MuiButton-root,
+  .form-container .MuiTypography-root,
+  .form-container .MuiLink-root {
+    padding: 0; /* Remove padding from elements */
+    margin-bottom: 16px; /* Optional: Add margin to separate elements */
+    width: 80%; /* Reduce label width */
+  }
+  
+  .center-link {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
+  }
+  
+  .center-button {
+    align-self: center;
+    width: 80%; /* Ensure the button is centered */
+  }
+  
+  .terms-checkbox {
+    white-space: nowrap;
+  }
+  
+  .center-text {
+    text-align: center;
+  }
+  
+  .center-button {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .text-field {
+    margin: 8px 0;
+    width: 5%;
+  }
+  
+  .terms-container {
+    margin: 16px 0;
+    text-align: center;
+  }
+  
+  .center-link {
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+  }
+  
+  .success {
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .success .MuiSvgIcon-root {
+    margin-right: 8px;
+  }

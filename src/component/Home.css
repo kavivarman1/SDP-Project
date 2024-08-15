@@ -1,0 +1,40 @@
+/* Home.css */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  width: 100vw;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  transition: filter 0.3s ease;
+}
+
+.home.blurred {
+  filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+.turf-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Center cards horizontally */
+  width: 100%;
+}
+
+.turf-card {
+  width: 100%; /* Ensure each card takes up the full width of its container */
+  max-width: 800px; /* Set a max width for the card */
+  margin-bottom: 20px; /* Space between rows */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+@media (max-width: 1200px) {
+  .home {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .turf-card {
+    max-width: 100%; /* Ensure cards fit within the viewport */
+  }
+}
+
